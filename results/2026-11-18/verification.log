@@ -1,0 +1,25 @@
+test_accumulation_and_negative_operands (test_mac_reference.TestMACReference.test_accumulation_and_negative_operands) ... ok
+test_controls (test_mac_reference.TestMACReference.test_controls) ... ok
+test_operand_range (test_mac_reference.TestMACReference.test_operand_range) ... ok
+test_signed_extremes (test_mac_reference.TestMACReference.test_signed_extremes) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module mac declared here: rtl/mac.v:3
+VCD info: dumpfile build/mac_waveforms.vcd opened for output.
+All 7 starter MAC checks passed.
+testbench/mac_tb.v:67: $finish called at 96000 (1ps)
+Waveform: build/mac_waveforms.vcd
+Open with: gtkwave build/mac_waveforms.vcd
+{"groups": {"all_operand_pairs": 65536, "directed": 16, "midstream_reset": 2, "negative_wrap": 519, "pair_clear": 65536, "positive_wrap": 514, "random": 10000}, "negative_wraps": 1, "positive_wraps": 1, "seed": 20261118, "vectors": 142123}
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module mac declared here: rtl/mac.v:3
+PASS: 142123 Python-reference MAC cycles; 106 between-edge reset checks
+testbench/mac_vectors_tb.v:38: $finish called at 1421236000 (1ps)

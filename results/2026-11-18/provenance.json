@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-18",
+  "recorded_utc": "2026-11-18T14:00:10.462950+00:00",
+  "baseline_commit": "83a67f9db21998d09ba335523487e561e3b1aad6",
+  "rtl_unchanged_from_baseline": true,
+  "python": "3.12.14",
+  "iverilog": "12.0 (stable)",
+  "yosys": "0.52 (fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+  "host": "Debian GNU/Linux 13 (x86_64)",
+  "synthesis": "synth -top mac -noabc; check -assert; latch absence assertion; stat",
+  "target_library": null,
+  "clock_constraint": null,
+  "source_sha256": {
+    "rtl/mac.v": "0b500628deff417a3ece55937d329c79ef0148d70ff7b23b692b6420aa0be3e1",
+    "testbench/mac_vectors_tb.v": "306e0078d98d42cedbf681ebd481365d9f42892590400d455e5801df29c38226",
+    "testbench/mac_tb.v": "f975696326e8b3c8e7dbb8287d2cb510174725f8ec0fe65cfffc7a66a70fdea3",
+    "scripts/run_verification.sh": "a93bd2e15a2f2aedf9e8a5cd7e2bba9dfaa5a452aa8175810080de9dbc5e3672",
+    "scripts/run_synthesis.sh": "6511fef3779b84828e45e2174a45763d8f665f9a727784a714a7650da47683c4",
+    "scripts/run_simulation.sh": "ea1afe7d8268b9554d306c5399035139b25be61f709ec88f3bbeddc5fa5cd1cb",
+    "python/mac_reference.py": "627b466825af9527f822257d99adefe635a9c04366c3f2e7dbca21bae0cf0352",
+    "python/generate_vectors.py": "dedaa8ae72ac8189c697235d9e24aeb2dfce5dc88854a09bb521bd3d3a437cd8",
+    "python/test_mac_reference.py": "5fd04ab53f50419ad3c4f9bd53e60b3da102dd1b4d154ebda6141b3c956f93ba"
+  },
+  "generic_cells": {
+    "$_DFFE_PN0P_": 24,
+    "$_OR_": 135,
+    "$_MUX_": 24,
+    "$_NOT_": 8,
+    "$_XOR_": 282,
+    "$_AND_": 359
+  },
+  "generic_cell_count": 832,
+  "vectors": {
+    "seed": 20261118,
+    "vectors": 142123,
+    "groups": {
+      "directed": 16,
+      "pair_clear": 65536,
+      "all_operand_pairs": 65536,
+      "positive_wrap": 514,
+      "negative_wrap": 519,
+      "midstream_reset": 2,
+      "random": 10000
+    },
+    "positive_wraps": 1,
+    "negative_wraps": 1
+  },
+  "vector_sha256": "3ba1990f5d1bc4a07ace75f5067ec0b96de42b2f672508bc6935a6b6239ec4b7"
+}
