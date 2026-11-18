@@ -1,0 +1,15 @@
+{
+  "seed": 20261118,
+  "vectors": 142123,
+  "groups": {
+    "directed": 16,
+    "pair_clear": 65536,
+    "all_operand_pairs": 65536,
+    "positive_wrap": 514,
+    "negative_wrap": 519,
+    "midstream_reset": 2,
+    "random": 10000
+  },
+  "positive_wraps": 1,
+  "negative_wraps": 1
+}

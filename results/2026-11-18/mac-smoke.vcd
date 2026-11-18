@@ -1,0 +1,191 @@
+$date
+	Wed Nov 18 14:58:07 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mac_tb $end
+$var wire 24 ! acc [23:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 1 $ clear $end
+$var reg 1 % clk $end
+$var reg 1 & enable $end
+$var reg 1 ' rst_n $end
+$var integer 32 ( checks [31:0] $end
+$scope module dut $end
+$var wire 8 ) a [7:0] $end
+$var wire 8 * b [7:0] $end
+$var wire 1 $ clear $end
+$var wire 1 % clk $end
+$var wire 1 & enable $end
+$var wire 1 ' rst_n $end
+$var wire 24 + product_extended [23:0] $end
+$var wire 16 , product [15:0] $end
+$var reg 24 - acc [23:0] $end
+$upscope $end
+$scope task step $end
+$var reg 8 . aa [7:0] $end
+$var reg 8 / bb [7:0] $end
+$var reg 1 0 clr $end
+$var reg 1 1 en $end
+$var reg 24 2 expected [23:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 2
+x1
+x0
+bx /
+bx .
+bx -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+0'
+0&
+0%
+0$
+b0 #
+b0 "
+bx !
+$end
+#5000
+b0 !
+b0 -
+1%
+#10000
+0%
+#15000
+1%
+#20000
+b1100 2
+00
+11
+b100 /
+b11 .
+1'
+0%
+#25000
+1%
+#30000
+1&
+b1100 +
+b1100 ,
+b100 #
+b100 *
+b11 "
+b11 )
+0%
+#35000
+b1100 !
+b1100 -
+1%
+#36000
+b111111111111111111111110 2
+b111 /
+b11111110 .
+b1 (
+#40000
+b111 #
+b111 *
+b111111111111111111110010 +
+b1111111111110010 ,
+b11111110 "
+b11111110 )
+0%
+#45000
+b111111111111111111111110 !
+b111111111111111111111110 -
+1%
+#46000
+b111111111100000001111110 2
+b10000000 /
+b1111111 .
+b10 (
+#50000
+b10000000 #
+b10000000 *
+b111111111100000010000000 +
+b1100000010000000 ,
+b1111111 "
+b1111111 )
+0%
+#55000
+b111111111100000001111110 !
+b111111111100000001111110 -
+1%
+#56000
+01
+b1001 /
+b101 .
+b11 (
+#60000
+0&
+b1001 #
+b1001 *
+b101101 +
+b101101 ,
+b101 "
+b101 )
+0%
+#65000
+1%
+#66000
+b0 2
+10
+11
+b100 (
+#70000
+1$
+1&
+0%
+#75000
+b0 !
+b0 -
+1%
+#76000
+b100000000000000 2
+00
+b10000000 /
+b10000000 .
+b101 (
+#80000
+0$
+b10000000 #
+b10000000 *
+b100000000000000 +
+b100000000000000 ,
+b10000000 "
+b10000000 )
+0%
+#85000
+b100000000000000 !
+b100000000000000 -
+1%
+#86000
+b101010 /
+b0 .
+b110 (
+#90000
+b101010 #
+b101010 *
+b0 +
+b0 ,
+b0 "
+b0 )
+0%
+#95000
+1%
+#96000
+b111 (

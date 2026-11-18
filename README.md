@@ -1,6 +1,9 @@
 # Tiny AI Accelerator — Learning Project
 
-**Status:** Project initialized. Starter MAC RTL and testbench are provided but have **not yet been simulator-verified**.
+**Status:** Existing MAC RTL verified by simulation and generic synthesis on
+2026-11-18. The original tests and 142,123 Python-reference cycles passed.
+See the [verification report](results/2026-11-18/report.md). The 2×2 array and
+physical FPGA implementation remain planned.
 
 This project explores digital circuits that perform multiply-and-accumulate (MAC) operations used in neural-network inference. It is part of the [Semiconductor Engineering Learning Journey](https://github.com/ZAIDRAR/semiconductor-learning-journey).
 
@@ -8,12 +11,12 @@ This project explores digital circuits that perform multiply-and-accumulate (MAC
 
 | Milestone | Deliverable | Status |
 |---|---|---|
-| 1 | Signed 8 × 8 MAC with 24-bit accumulator | Starter RTL added; simulation pending |
-| 2 | Self-checking testbench, waveforms, edge cases | Starter testbench added; execution pending |
-| 3 | Python numerical reference model | Reference implementation added |
+| 1 | Signed 8 × 8 MAC with 24-bit accumulator | RTL verified in the documented regression |
+| 2 | Self-checking testbench, waveforms, edge cases | 7 starter checks + reset check; 142,123 reference cycles passed |
+| 3 | Python numerical reference model | 4 unit tests passed; used for RTL comparison |
 | 4 | Processing-element interface and dataflow specification | Planned |
 | 5 | Small 2×2 processing array | Planned |
-| 6 | Synthesis and PPA/resource study | Planned |
+| 6 | Synthesis and PPA/resource study | Generic synthesis verified; target-specific PPA pending |
 
 ## Initial MAC specification
 
@@ -49,7 +52,13 @@ With Icarus Verilog installed, from the repository root:
 bash scripts/run_simulation.sh
 ```
 
-A waveform should be written to `build/mac_waveforms.vcd` when simulation works. View it with GTKWave. The output has not yet been run or verified here.
+The starter run generates `build/mac_waveforms.vcd`. A dated copy is included
+with the verification evidence. GTKWave GUI review remains a learner task.
+
+Run the expanded regression with `bash scripts/run_verification.sh` and generic
+synthesis with `bash scripts/run_synthesis.sh` (Yosys required). The regression
+generates deterministic vectors using seed `20261118` and checks RTL against
+the existing Python model on every cycle, including both wrap directions.
 
 Optional software-model test:
 

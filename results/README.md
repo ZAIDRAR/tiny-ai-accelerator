@@ -1,6 +1,9 @@
 # Results
 
-No actual Verilog simulation or hardware measurement has been recorded yet.
+[2026-11-18 MAC audit](2026-11-18/report.md): original RTL, Python reference,
+expanded cycle-by-cycle regression and generic synthesis were executed. The
+2×2 processing array, target-specific timing/power and physical implementation
+remain unverified.
 
 When tests are run, add:
 - Icarus Verilog version
